@@ -4,7 +4,10 @@
     <!--
     -->
     <mat-nav-list (click)="sidenav.close()">
-      <a mat-list-item routerLink="/" routerLinkActive="active">Courses</a>
+      <a mat-list-item routerLink="/" routerLinkActive="active">
+        <mat-icon>library_books</mat-icon>
+        <span>Courses</span>
+      </a>
       <a mat-list-item routerLink="/about" routerLinkActive="active">About</a>
       <a mat-list-item>Register</a>
       <a mat-list-item>Login</a>
