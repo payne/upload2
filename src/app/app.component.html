@@ -3,11 +3,12 @@
   <mat-sidenav #sidenav>
     <!--
     -->
-    <mat-list>
-      <a mat-list-item routerLink="/home" routerLinkActive="active">Home</a>
+    <mat-nav-list (click)="sidenav.close()">
+      <a mat-list-item routerLink="/" routerLinkActive="active">Courses</a>
       <a mat-list-item routerLink="/about" routerLinkActive="active">About</a>
-      <a mat-list-item routerLink="/contact" routerLinkActive="active">Contact</a>
-    </mat-list>
+      <a mat-list-item>Register</a>
+      <a mat-list-item>Login</a>
+    </mat-nav-list>
   </mat-sidenav>
 
   <mat-toolbar>
