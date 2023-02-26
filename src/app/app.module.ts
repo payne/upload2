@@ -9,6 +9,7 @@ import {MatToolbarModule} from "@angular/material/toolbar";
 import {MatIconModule} from "@angular/material/icon";
 import {MatListModule} from "@angular/material/list";
 import { UploadTableComponent } from './upload-table/upload-table.component';
+import {MatTableModule} from "@angular/material/table";
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { UploadTableComponent } from './upload-table/upload-table.component';
     MatSidenavModule,
     MatToolbarModule,
     MatListModule,
+    MatTableModule,
     MatIconModule,
     BrowserAnimationsModule
   ],

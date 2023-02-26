@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MatSort } from "@angular/material/sort";
 
 @Component({
   selector: 'app-upload-table',
@@ -14,6 +15,7 @@ export class UploadTableComponent {
     {id: 4, name: 'upload4', type: 'Yahtzee', date: '2020-01-04', status: 'published'},
     ];
 
-
+  displayedColumns: string[] = ['name'];
+  alldisplayedColumns: string[] = ['id', 'name', 'type', 'date', 'status'];
 
 }
