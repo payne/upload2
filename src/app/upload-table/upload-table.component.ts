@@ -34,7 +34,7 @@ export class UploadTableComponent implements OnInit, AfterViewInit {
   @ViewChild(MatSort) sort: MatSort;
 
   ngOnInit() {
-
+    this.loadUploadsPage();
   }
 
   ngAfterViewInit() {
@@ -47,9 +47,10 @@ export class UploadTableComponent implements OnInit, AfterViewInit {
 
 
   private loadUploadsPage() {
-    console.table( {pageIndex: this.paginator.pageIndex, pageSize: this.paginator.pageSize});
+    const pageIndex = this.paginator ? this.paginator.pageIndex : 0;
+    const pageSize = this.paginator ? this.paginator.pageSize : 5;
+    console.table( {pageIndex: pageIndex, pageSize: pageSize});
     this.uploads =
-      this.uploadsData.slice(this.paginator.pageIndex * this.paginator.pageSize,
-        (this.paginator.pageIndex + 1) * this.paginator.pageSize);
+      this.uploadsData.slice(pageIndex * pageSize, (pageIndex + 1) * pageSize);
   }
 }

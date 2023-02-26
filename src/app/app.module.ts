@@ -12,11 +12,19 @@ import { UploadTableComponent } from './upload-table/upload-table.component';
 import {MatTableModule} from "@angular/material/table";
 import {MatSortModule} from "@angular/material/sort";
 import {MatPaginatorModule} from "@angular/material/paginator";
+import { AboutComponent } from './about/about.component';
+import { RegisterComponent } from './register/register.component';
+import { LoginComponent } from './login/login.component';
+import { CoursesComponent } from './courses/courses.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    UploadTableComponent
+    UploadTableComponent,
+    AboutComponent,
+    RegisterComponent,
+    LoginComponent,
+    CoursesComponent
   ],
   imports: [
     BrowserModule,
