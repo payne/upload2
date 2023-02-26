@@ -8,10 +8,15 @@ import {MatSidenavModule} from "@angular/material/sidenav";
 import {MatToolbarModule} from "@angular/material/toolbar";
 import {MatIconModule} from "@angular/material/icon";
 import {MatListModule} from "@angular/material/list";
+import { UploadTableComponent } from './upload-table/upload-table.component';
+import {MatTableModule} from "@angular/material/table";
+import {MatSortModule} from "@angular/material/sort";
+import {MatPaginatorModule} from "@angular/material/paginator";
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    UploadTableComponent
   ],
   imports: [
     BrowserModule,
@@ -19,8 +24,10 @@ import {MatListModule} from "@angular/material/list";
     MatSidenavModule,
     MatToolbarModule,
     MatListModule,
-    MatIconModule,
-    BrowserAnimationsModule
+    MatTableModule,
+    MatIconModule,MatPaginatorModule,
+    BrowserAnimationsModule,
+    MatSortModule
   ],
   providers: [],
   bootstrap: [AppComponent]
