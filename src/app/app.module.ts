@@ -11,6 +11,9 @@ import {MatListModule} from "@angular/material/list";
 import {MatNativeDateModule} from "@angular/material/core";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { Table1Component } from './table1/table1.component';
+import {MatTableModule} from "@angular/material/table";
+import {MatPaginatorModule} from "@angular/material/paginator";
+import {MatInputModule} from "@angular/material/input";
 
 @NgModule({
   declarations: [
@@ -23,10 +26,11 @@ import { Table1Component } from './table1/table1.component';
     MatSidenavModule,
     MatToolbarModule,
     MatListModule,
+    MatTableModule, MatPaginatorModule,
     MatNativeDateModule,
     FormsModule, ReactiveFormsModule,
     MatIconModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule, MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,4 +1,3 @@
-import { Component } from '@angular/core';
 import {Component, OnInit, ViewChild} from '@angular/core';
 import { AbstractControl, FormArray, FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { MatPaginator } from '@angular/material/paginator';
@@ -42,6 +41,7 @@ export class Table1Component
   isLoading = true;
 
   pageNumber: number = 1;
+  // @ts-ignore
   VOForm: FormGroup;
   isEditableNew: boolean = true;
   constructor(
@@ -79,6 +79,7 @@ export class Table1Component
     //   data.name.trim().toLowerCase().indexOf(filterValue) !== -1;
   }
 
+  // @ts-ignore
   @ViewChild(MatPaginator) paginator: MatPaginator;
 
   goToPage() {
@@ -110,7 +111,9 @@ export class Table1Component
   // @ViewChild('table') table: MatTable<PeriodicElement>;
   AddNewRow() {
     // this.getBasicDetails();
-    const control = this.VOForm.get('VORows') as FormArray;
+    let control: FormArray<any>;
+    // @ts-ignore
+    control = this.VOForm.get('VORows') as FormArray;
     control.insert(0,this.initiateVOForm());
     this.dataSource = new MatTableDataSource(control.controls)
     // control.controls.unshift(this.initiateVOForm());
@@ -120,6 +123,7 @@ export class Table1Component
   }
 
   // this function will enabled the select field for editd
+  // @ts-ignore
   EditSVO(VOFormElement, i) {
 
     // VOFormElement.get('VORows').at(i).get('name').disabled(false)
@@ -129,20 +133,25 @@ export class Table1Component
   }
 
   // On click of correct button in table (after click on edit) this method will call
+  // @ts-ignore
   SaveVO(VOFormElement, i) {
     // alert('SaveVO')
     VOFormElement.get('VORows').at(i).get('isEditable').patchValue(true);
   }
 
   // On click of cancel button in the table (after click on edit) this method will call and reset the previous data
+  // @ts-ignore
   CancelSVO(VOFormElement, i) {
     VOFormElement.get('VORows').at(i).get('isEditable').patchValue(true);
   }
 
 
+  // @ts-ignore
   paginatorList: HTMLCollectionOf<Element>;
+  // @ts-ignore
   idx: number;
   onPaginateChange(paginator: MatPaginator, list: HTMLCollectionOf<Element>) {
+    // @ts-ignore
     setTimeout((idx) => {
       let from = (paginator.pageSize * paginator.pageIndex) + 1;
 
