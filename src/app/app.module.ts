@@ -18,6 +18,7 @@ import { LoginComponent } from './login/login.component';
 import { CoursesComponent } from './courses/courses.component';
 import {HttpClientModule} from "@angular/common/http";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import { UploadFilesComponent } from './upload-files/upload-files.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
     AboutComponent,
     RegisterComponent,
     LoginComponent,
-    CoursesComponent
+    CoursesComponent,
+    UploadFilesComponent
   ],
   imports: [
     BrowserModule,
