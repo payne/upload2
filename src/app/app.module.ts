@@ -16,6 +16,8 @@ import { AboutComponent } from './about/about.component';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { CoursesComponent } from './courses/courses.component';
+import {HttpClientModule} from "@angular/common/http";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -33,7 +35,7 @@ import { CoursesComponent } from './courses/courses.component';
     MatToolbarModule,
     MatListModule,
     MatTableModule,
-    MatIconModule,MatPaginatorModule,
+    MatIconModule,MatPaginatorModule,HttpClientModule,FormsModule,ReactiveFormsModule,
     BrowserAnimationsModule,
     MatSortModule
   ],
