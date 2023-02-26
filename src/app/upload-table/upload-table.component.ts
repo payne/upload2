@@ -47,7 +47,9 @@ export class UploadTableComponent implements OnInit, AfterViewInit {
 
 
   private loadUploadsPage() {
+    console.table( {pageIndex: this.paginator.pageIndex, pageSize: this.paginator.pageSize});
     this.uploads =
-      this.uploadsData.slice(this.paginator.pageIndex * this.paginator.pageSize, (this.paginator.pageIndex + 1) * this.paginator.pageSize);
+      this.uploadsData.slice(this.paginator.pageIndex * this.paginator.pageSize,
+        (this.paginator.pageIndex + 1) * this.paginator.pageSize);
   }
 }
