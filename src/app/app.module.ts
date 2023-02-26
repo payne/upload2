@@ -11,6 +11,7 @@ import {MatListModule} from "@angular/material/list";
 import { UploadTableComponent } from './upload-table/upload-table.component';
 import {MatTableModule} from "@angular/material/table";
 import {MatSortModule} from "@angular/material/sort";
+import {MatPaginatorModule} from "@angular/material/paginator";
 
 @NgModule({
   declarations: [
@@ -24,7 +25,7 @@ import {MatSortModule} from "@angular/material/sort";
     MatToolbarModule,
     MatListModule,
     MatTableModule,
-    MatIconModule,
+    MatIconModule,MatPaginatorModule,
     BrowserAnimationsModule,
     MatSortModule
   ],

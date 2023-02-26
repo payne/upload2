@@ -1,12 +1,13 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, AfterViewInit, ViewChild } from '@angular/core';
 import { MatSort } from "@angular/material/sort";
+import { MatPaginator } from "@angular/material/paginator";
 
 @Component({
   selector: 'app-upload-table',
   templateUrl: './upload-table.component.html',
   styleUrls: ['./upload-table.component.scss']
 })
-export class UploadTableComponent {
+export class UploadTableComponent implements OnInit, AfterViewInit {
 
   uploads = [
     {id: 1, name: 'upload1', type: 'dogs', date: '2020-01-01', status: 'published'},
@@ -16,5 +17,21 @@ export class UploadTableComponent {
     ];
 
   displayedColumns: string[] = ['id', 'name', 'type', 'date', 'status'];
+
+
+  // @ts-ignore
+  @ViewChild(MatPaginator) paginator: MatPaginator;
+  // @ts-ignore
+  @ViewChild(MatSort) sort: MatSort;
+
+  ngOnInit() {
+
+  }
+
+  ngAfterViewInit() {
+    this.sort.sortChange.subscribe(() => this.paginator.pageIndex = 0);
+  }
+
+
 
 }
