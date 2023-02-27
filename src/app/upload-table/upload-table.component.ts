@@ -17,21 +17,18 @@ export class UploadTableComponent implements OnInit, AfterViewInit {
 
   uploads: Upload[] = [];
   uploadsData: Upload[] = [
-    {id: 1, name: 'upload1', type: 'dogs', date: '2020-01-01', status: 'published'}
-    /*
-    ,{id: 2, name: 'upload2', type: 'solo', date: '2020-01-02', status: 'published'},
+    {id: 1, name: 'upload1', type: 'dogs', date: '2020-01-01', status: 'published'},
+    {id: 2, name: 'upload2', type: 'solo', date: '2020-01-02', status: 'published'},
     {id: 3, name: 'upload3', type: 'dogs', date: '2020-01-03', status: 'pending'},
     {id: 4, name: 'upload4', type: 'Yahtzee', date: '2020-01-04', status: 'published'},
     {id: 5, name: 'upload5', type: 'Poppy', date: '2020-01-05', status: 'published'},
     {id: 6, name: 'upload6', type: 'solo', date: '2020-01-06', status: 'published'},
     {id: 7, name: 'upload7', type: 'Poppy', date: '2020-01-07', status: 'published'},
     {id: 8, name: 'upload8', type: 'Poppy', date: '2020-01-08', status: 'published'},
-     */
     ];
   tableDataSource = new MatTableDataSource<any>(); //TODO: Avoid constructing just to get type?
   uploadCount = this.uploadsData.length
-  // displayedColumns: string[] = ['id', 'name', 'type', 'date', 'status'];
-  displayedColumns: string[] = ['id', 'name'];
+  displayedColumns: string[] = ['id', 'name', 'type', 'date', 'status'];
 
 
   // @ts-ignore
@@ -50,11 +47,9 @@ export class UploadTableComponent implements OnInit, AfterViewInit {
         this.formBuilder.group({
           id: new FormControl(upload.id),
           name: new FormControl(upload.name),
-          /*
           type: new FormControl(upload.type),
           date: new FormControl(upload.date),
           status: new FormControl(upload.status),
-           */
         })
       )) // end of formBuilder.array
     });
