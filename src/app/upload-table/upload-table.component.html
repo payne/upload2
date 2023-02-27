@@ -8,9 +8,9 @@
            matSort matSortDisableClear matSortActive="id" matSortDirection="asc">
 
       <ng-container matColumnDef="id">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header> id </th>
+        <th mat-header-cell *matHeaderCellDef mat-sort-header class="id-header"> id </th>
         <td mat-cell *matCellDef="let upload; let i = index" [formGroup]="upload">
-          <mat-form-field>
+          <mat-form-field class="id-cell"><!-- this id-cell class is not working :-( -->
             <input matInput type="text" formControlName="id">
           </mat-form-field>
         </td>
