@@ -4,3 +4,5 @@ https://stackblitz.com/edit/angular-custom-pagination-mat-table?file=src%2Fmain.
 
 I want to try: https://medium.com/tech-insights/how-to-deploy-angular-apps-to-github-pages-gh-pages-896c4e10f9b4
 
+Another example that is good: https://stackblitz.com/edit/angular-material-table-with-form?file=app%2Fapp.component.html
+
