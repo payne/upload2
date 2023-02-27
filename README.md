@@ -14,7 +14,11 @@ In the upload table component there's a simple array of objects (`uploadsData`) 
         1. `formBuilder.group` and that group is a row -- with each column in the row being a `FormControl`   
 
 
-Does it need to be so complicated?  :thinking:
+It's slick!  There's one form with many groups.  One of the groups is an array.  In that array there is one group for each row in the table.
+
+### Trying github co-pilot
+
+https://youtu.be/vSxVhg5RX6E is an unlisted (1 minute & 47 second) video showing off how co-pilot is helpful.  It fills in repetiative things nicely.
 
 ## TODO 
 
