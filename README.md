@@ -1,3 +1,6 @@
+
+# Try it on GitHUB: https://payne.github.io/upload2/upload-table
+
 # Upload2
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.0.
