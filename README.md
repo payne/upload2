@@ -1,6 +1,27 @@
 
 # Try it on GitHUB: https://payne.github.io/upload2/upload-table
 
+## Notes
+
+After Angular-University.io helped me with basics of angular material table, I wanted to get editing of the table working.
+So, I studied this random google result: https://stackblitz.com/edit/angular-custom-pagination-mat-table?file=src%2Fmain.ts and got 
+a version of it working here.  Joy! 
+
+In the upload table component there's a simple array of objects (`uploadsData`) that gets turned into a table where
+1. The whole table is a build by looping over VOForm  
+2. The VOForm holds a `formBuilder.group` that is one  
+    1. `formBuilder.array` and each row of the array is 
+        1. `formBuilder.group` and that group is a row -- with each column in the row being a `FormControl`   
+
+
+Does it need to be so complicated?  :thinking:
+
+## TODO 
+
+1. Implement an edit (pencil) icon button and save button for each row like the example above
+1. Figure out how to change the column widths
+2. Connect it to a backend
+
 # Upload2
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.0.
