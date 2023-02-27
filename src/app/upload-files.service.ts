@@ -1,6 +1,7 @@
 // Trying to follow https://www.bezkoder.com/angular-11-multiple-file-upload/
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpRequest, HttpEvent } from '@angular/common/http';
+import { of } from 'rxjs';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -22,6 +23,7 @@ export class UploadFilesService {
   }
 
   getFiles(): Observable<any> {
-    return this.http.get(`${this.baseUrl}/files`);
+    return of([]);
+    // return this.http.get(`${this.baseUrl}/files`);
   }
 }
