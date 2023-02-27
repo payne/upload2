@@ -19,6 +19,8 @@ import { CoursesComponent } from './courses/courses.component';
 import {HttpClientModule} from "@angular/common/http";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { UploadFilesComponent } from './upload-files/upload-files.component';
+import {MatFormFieldModule} from "@angular/material/form-field";
+import {MatInputModule} from "@angular/material/input";
 
 @NgModule({
   declarations: [
@@ -36,7 +38,7 @@ import { UploadFilesComponent } from './upload-files/upload-files.component';
     MatSidenavModule,
     MatToolbarModule,
     MatListModule,
-    MatTableModule,
+    MatTableModule,MatFormFieldModule,MatInputModule,
     MatIconModule,MatPaginatorModule,HttpClientModule,FormsModule,ReactiveFormsModule,
     BrowserAnimationsModule,
     MatSortModule
